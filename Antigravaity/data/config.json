@@ -1,0 +1,15 @@
+{
+  "url": "https://laravel.stacxuat.com/Login/index",
+  "email": "sumitkumar.sinha@avanzetechlabs.com",
+  "password": "Radiant@2026",
+  "otp": "414338",
+  "client": "Freedom",
+  "product": "Post closing product",
+  "project": "freedom pcr",
+  "order_number": "TestloanA211026001",
+  "stacx_id": "MCL72926122422",
+  "package_file": "testpackage/Testloanpackge_1.pdf",
+  "order_entry_url": "https://laravel.stacxuat.com/Orderentry/index",
+  "transactions_url": "https://laravel.stacxuat.com/Transactions",
+  "status": "Pending"
+}

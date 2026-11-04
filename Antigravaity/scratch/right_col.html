@@ -1,0 +1,77 @@
+ <!-- STX-7498 -->
+          <!-- @Desc STX-7498 Page Confidence Legends - START @Author Jain @On Aug 08 2025  -->
+          <div class="card rounded-12 shadow-dark-80" style="margin-top: 10px;padding:10px;">
+            <div class="col-md-12" style="margin: 0 !important;display: flex;justify-content: space-between;align-items: center;">
+              <div class="h6 col-md-9">Page Confidence Legends</div>
+              <div class="col-md-3">
+                <button class="btn btn-sm reset-selected" style="position: relative; float:right; padding: 3px;display: none;border:1px solid #BBBBBB;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"></path>
+                  <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.309a.25.25 0 0 0 0 .382l2.36 1.966A.25.25 0 0 0 8 4.466"></path>
+                </svg>Reset</button>
+              </div>
+            </div>
+            <div class="col-md-12 page-cofidence-legends-range" style="margin: 0 !important;">
+                                    <button style="height: 1.5rem; min-width:93px; margin: 5px 5px 0 0; padding: 5px; cursor: pointer; background-color: Green; color: #FFFFFF;" class="btn position-relative setCursor filter-extraction 2_1_conf">
+                        6 | 100 %                      </button>
+                                            <button style="height: 1.5rem; min-width:93px; margin: 5px 5px 0 0; padding: 5px; cursor: pointer; background-color: Blue; color: #FFFFFF;" class="btn position-relative setCursor filter-extraction 2_2_conf">
+                        22 | 95-99.9 %                      </button>
+                                            <button style="height: 1.5rem; min-width:93px; margin: 5px 5px 0 0; padding: 5px; cursor: pointer; background-color: Orange; color: #FFFFF0;" class="btn position-relative setCursor filter-extraction 2_3_conf">
+                        0 | 90-94.9 %                      </button>
+                                            <button style="height: 1.5rem; min-width:93px; margin: 5px 5px 0 0; padding: 5px; cursor: pointer; background-color: Yellow; color: #FFFFF0;" class="btn position-relative setCursor filter-extraction 2_4_conf">
+                        19 | 75-89.9 %                      </button>
+                                            <button style="height: 1.5rem; min-width:93px; margin: 5px 5px 0 0; padding: 5px; cursor: pointer; background-color: Red; color: #00012f;" class="btn position-relative setCursor filter-extraction 2_5_conf">
+                        10 | 0-74.9 %                      </button>
+                                    </div>
+            <!-- @Desc STX-7498 Page Confidence Legends - END @Author Jain @On Aug 08 2025 -->
+
+            <!-- @Desc STX-7498 Total and Classified pages count - START @Author Jain @On Aug 08 2025 -->
+              <div class="col-md-12" style="margin: 10px 0 10px 0;">
+                <span style="font-size: 14px; font-weight: bold;">Classification complete</span>
+              </div>
+
+              <div class="col-md-12">
+                <div class="mt-10">
+                  <div class="progress progress-line-default" style="height: 8px; background-color: #e0e0e0; border-radius: 5px;">
+                    <div id="progressBar" class="progress-bar progress-bar-info futureduelevel" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%; background-color: #2e7d32; border-radius: 5px;">
+                    <span class="sr-only" id="progressText">0% Complete</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <span style="cursor: pointer; font-size: 12px; color: #666666;">
+                Classified <b id="Classi_Count"></b> of <span id="Total_Count"></span> pages
+              </span>
+            </div>
+          </div>
+          <!-- @Desc STX-7498 Total and Classified pages count - END @Author Jain @On Aug 08 2025 -->
+          <div class="card rounded-12 shadow-dark-80" style="margin-top: 10px;"><!-- STX-7498 -->
+              <div class="col-md-12" style="padding: 10px;">
+                <span class="d-flex">
+                  <h5 class="pd-l w-60" style="margin: 0px;">Unclassified</h5>
+
+                  <div class="float-end w-50 text-end">
+                    <span class="cursor-pointer tooltip_new unclassifiedPageSort"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#0d6efd" class="bi bi-sort-down-alt" viewBox="0 0 16 16"><path d="M3.5 3.5a.5.5 0 0 0-1 0v8.793l-1.146-1.147a.5.5 0 0 0-.708.708l2 1.999.007.007a.497.497 0 0 0 .7-.006l2-2a.5.5 0 0 0-.707-.708L3.5 12.293zm4 .5a.5.5 0 0 1 0-1h1a.5.5 0 0 1 0 1zm0 3a.5.5 0 0 1 0-1h3a.5.5 0 0 1 0 1zm0 3a.5.5 0 0 1 0-1h5a.5.5 0 0 1 0 1zM7 12.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7a.5.5 0 0 0-.5.5"></path></svg></span> <!-- icon for sorting Added by Harshita on 27 June 2024 STX-6621 <i class='fas fa-long-arrow-alt-down unclassifiedPageSort'></i>-->
+                    <span class="cursor-pointer CurrentTab_fullscreen_btn d-none">
+                      <svg width="15" height="15" viewBox="0 0 16 16" class="bi bi-arrows-fullscreen" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M1.464 10.536a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3.5a.5.5 0 0 1-.5-.5v-3.5a.5.5 0 0 1 .5-.5z"></path>
+                        <path fill-rule="evenodd" d="M5.964 10a.5.5 0 0 1 0 .707l-4.146 4.147a.5.5 0 0 1-.707-.708L5.257 10a.5.5 0 0 1 .707 0zm8.854-8.854a.5.5 0 0 1 0 .708L10.672 6a.5.5 0 0 1-.708-.707l4.147-4.147a.5.5 0 0 1 .707 0z"></path>
+                        <path fill-rule="evenodd" d="M10.5 1.5A.5.5 0 0 1 11 1h3.5a.5.5 0 0 1 .5.5V5a.5.5 0 0 1-1 0V2h-3a.5.5 0 0 1-.5-.5zm4 9a.5.5 0 0 0-.5.5v3h-3a.5.5 0 0 0 0 1h3.5a.5.5 0 0 0 .5-.5V11a.5.5 0 0 0-.5-.5z"></path>
+                        <path fill-rule="evenodd" d="M10 9.964a.5.5 0 0 0 0 .708l4.146 4.146a.5.5 0 0 0 .708-.707l-4.147-4.147a.5.5 0 0 0-.707 0zM1.182 1.146a.5.5 0 0 0 0 .708L5.328 6a.5.5 0 0 0 .708-.707L1.889 1.146a.5.5 0 0 0-.707 0z"></path>
+                        <path fill-rule="evenodd" d="M5.5 1.5A.5.5 0 0 0 5 1H1.5a.5.5 0 0 0-.5.5V5a.5.5 0 0 0 1 0V2h3a.5.5 0 0 0 .5-.5z"></path>
+                      </svg>
+                    </span>
+                    <!-- <span class="cursor-pointer CurrentTab_exitscreen_btn">
+                      <button type="button" style="height: 1.4rem;padding: .25rem .5rem;color:#000;" class="btn btn-sm btn-soft-danger tooltip_new" title="Click here to minimize screen" >Exit</button>
+                    </span> --><!-- Commented by Harshita on 27 June 2024 STX-6621 -->
+                    <span class="cursor-pointer CurrentTab_exitscreen_btn tooltip_new"><svg width="20" height="20" viewBox="0 0 16 16" class="bi bi-arrows-collapse" fill="#ff3535" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.646 14.354a.5.5 0 0 0 .708-.708L2.707 11H4.5a.5.5 0 0 0 0-1h-3a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 1 0v-1.793l2.647 2.647zm6.708-12.708a.5.5 0 0 0-.708.708L13.293 5H11.5a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-1 0v1.793L11.354 1.646zm0 12.708a.5.5 0 0 1-.708-.708L13.293 11H11.5a.5.5 0 0 1 0-1h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-1.793L11.354 14.354zm-6.708-12.708a.5.5 0 0 1 .708.708L2.707 5H4.5a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 1 0v1.793L4.646 1.646z"></path></svg></span> <!-- icon for collapse Added by Harshita on 27 June 2024 STX-6621 <i class="fas fa-compress-arrows-alt"></i>-->
+                  </div>
+                </span>
+              </div>
+            <div class="card classification_right_div " style="padding: 0 0 10px 10px;background-color: transparent !important;"><!-- STX-7498 -->
+              <ol class="unsortable unclassified-container mb-0 ps-0 sidebar-custom sidebar" id="unclassifiedPageContainerId"><!-- STX-6621 -->
+                              </ol>
+            </div>
+          </div>
+        
