@@ -1,0 +1,9 @@
+{
+  "valid_logins": [
+    {
+      "id": "valid-student",
+      "username": "student",
+      "password": "Password123"
+    }
+  ]
+}

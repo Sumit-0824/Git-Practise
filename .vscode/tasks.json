@@ -1,0 +1,47 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run headed Playwright login",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"practice-test-login.js"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Run headed pytest framework",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"-m",
+				"pytest",
+				"--headed"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Install pytest Playwright Chromium",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"-m",
+				"playwright",
+				"install",
+				"chromium"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Stage final Git changes",
+			"type": "shell",
+			"command": "cmd.exe",
+			"args": [
+				"/c",
+				"git add -A && git status --short && git diff --cached --stat && git diff --cached --check"
+			],
+			"isBackground": false
+		}
+	]
+}

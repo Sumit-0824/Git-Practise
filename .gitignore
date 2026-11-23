@@ -1,0 +1,8 @@
+.playwright-mcp/
+node_modules/
+reports/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+.venv/
+.vscode/settings.json
