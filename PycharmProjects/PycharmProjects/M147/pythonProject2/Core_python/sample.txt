@@ -1,0 +1,4 @@
+Hi you are writing the data into sample 
+Hi Sumit, This is file handling class 
+this is writelines function
+End of lines 
