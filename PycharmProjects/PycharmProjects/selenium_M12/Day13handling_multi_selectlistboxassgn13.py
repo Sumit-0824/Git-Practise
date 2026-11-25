@@ -1,0 +1,32 @@
+from time import sleep
+from selenium import webdriver
+from selenium.webdriver.support.select import Select
+
+opts=webdriver.ChromeOptions()
+opts.add_experimental_option("detach",True)
+driver=webdriver.Chrome(options=opts)
+url="https://demowebshop.tricentis.com/"
+driver.get(url)
+driver.maximize_window()
+driver.find_element("xpath",'(//a[contains(text(),"Books")])[3]').click()
+sleep(2)
+element=driver.find_element("id","products-orderby")
+select_obj=Select(element)
+select_obj.select_by_visible_text("Position")
+sleep(2)
+# select_obj.select_by_visible_text("Name: A to Z")
+# sleep(2)
+select_obj.select_by_index(3)
+sleep(2)
+# select_obj.select_by_index(4)
+# sleep(2)
+select_obj.deselect_by_index(3)
+sleep(2)
+pagesize_element=driver.find_element("name","products-pagesize")
+pagesize_obj=Select(pagesize_element)
+pagesize_obj.select_by_index(2)
+sleep(2)
+view_element=driver.find_element("name","products-viewmode")
+view_obj=Select(view_element)
+view_obj.select_by_index(1)
+sleep(2)
